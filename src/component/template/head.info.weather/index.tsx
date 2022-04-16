@@ -1,11 +1,11 @@
 import React,{FC} from 'react'
 import {Container} from "./style"
+import InfoTitle from "../../organism/head.info.weather"
 
 const Index:FC = () => {
     return (
         <Container>
-            <div className="temp_number">0 C</div>
-            <div className="show_more">batafsil...</div>
+            <InfoTitle/>
         </Container>
     )
 }

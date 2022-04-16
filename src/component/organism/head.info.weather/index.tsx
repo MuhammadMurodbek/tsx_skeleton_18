@@ -1,11 +1,13 @@
 import React,{FC} from 'react'
 import {Container} from "./style"
+import InfoCity from "../../molecules/info.content.up"
+import InfoMainWeather from "../../molecules/info.content.down"
 
 const Index:FC = () => {
     return (
         <Container>
-            <div className="temp_number">0 C</div>
-            <div className="show_more">batafsil...</div>
+            <InfoCity/>
+            <InfoMainWeather/>
         </Container>
     )
 }

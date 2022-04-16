@@ -15,5 +15,6 @@ export const MapWrapper = styled.div`
 `
 export const InfoWrapper = styled.div`
     display: flex;
-    margin-top: 20px;
+    margin-top: 25px;
+    padding:0 40px;
 `
