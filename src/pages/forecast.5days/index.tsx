@@ -1,11 +1,11 @@
 import React from 'react'
 
-const po = () => {
+const Index = () => {
     return (
         <div>
-            lroem
+            
         </div>
     )
 }
 
-export default po
+export default Index
