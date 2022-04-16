@@ -8,13 +8,13 @@ export const Wrapper = styled.div`
 `
 export const FormWrapper = styled.div`
     width: 600px;
-    padding: 10px;
+    /* padding: 10px; */
     margin:0 auto;
 `
 export const MapWrapper = styled.div`
 `
 export const InfoWrapper = styled.div`
     display: flex;
-    margin-top: 25px;
+    margin-top: 15px;
     padding:0 40px;
 `

@@ -8,11 +8,12 @@ import HeadInfoWeather from "../../organism/head.info.weather"
 const Index:FC = () => {
     return (
         <Wrapper>
-            <FormWrapper>
-                <FormComponent/>
-            </FormWrapper>
+           
             <InfoWrapper>
-                <HeadInfoWeather/>
+                <FormWrapper>
+                    <FormComponent />
+                    <HeadInfoWeather/>
+                </FormWrapper>
                 <MapWrapper>
                     <GoogleMap/> 
                 </MapWrapper>
