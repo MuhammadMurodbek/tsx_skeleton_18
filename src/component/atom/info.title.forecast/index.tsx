@@ -4,8 +4,7 @@ import {Container} from "./style"
 const Index:FC = () => {
     return (
         <Container>
-            <div className="time_zone"></div>
-            <div className="title_city"></div>
+            <div className="time_zone">Feels like 2 C</div>
         </Container>
     )
 }
