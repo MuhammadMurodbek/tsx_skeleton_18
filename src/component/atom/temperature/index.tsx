@@ -1,11 +1,16 @@
 import React,{FC} from 'react'
 import {Container} from "./style"
+import Button from "../button"
 
-const Index:FC = () => {
+type propsData = {
+    title?:string
+}
+
+const Index:FC<propsData> = ({title}) => {
     return (
         <Container>
             <div className="temp_number">0°C</div>
-            <button className="show_more">Read more...</button>
+            <Button>{title}</Button>
         </Container>
     )
 }
