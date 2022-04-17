@@ -1,17 +1,18 @@
 import styled from "styled-components"
-
-export const Container = styled.div`
+interface dataProps{
+    term:string | undefined
+}
+export const Container = styled.div<dataProps>`
     width: 100%;
     .temp_number{
         display: flex;
         align-items: center;
         flex-direction:column;
-        /* border:1px solid green; */
-        background: #39bfc3;
+        background: ${state=>state.term === 'Morning' ? '#39bfc3':state.term ==='Day' ? '#fbca01': state.term ==='Evening' ? '#fa5982':'#803e99'};
         border-radius: 5px;
         color: #fff;
         padding:5px 3px;
-        /* font-size:1.3rem; */
+        box-shadow: 0 0 8px -2px ${state=>state.term === 'Morning' ? '#39bfc3':state.term ==='Day' ? '#fbca01': state.term ==='Evening' ? '#fa5982':'#803e99'};
     }
     .temp{
         font-size: 1.1rem;

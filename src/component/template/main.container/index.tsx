@@ -5,6 +5,8 @@ import FormComponent from "../../organism/form.side"
 import ModalContainer from "../../atom/modal"
 import {dataProps} from "../../../entities/types/dataApiProps"
 import HeadInfoWeather from "../../organism/head.info.weather"
+import BrushChart from "../../organism/brush.chart.labeled"
+// import LineChart from "../../molecules/line.chart/asd"
 
 const Index:FC<dataProps> = ({data}) => {
     return (
@@ -19,6 +21,8 @@ const Index:FC<dataProps> = ({data}) => {
                 </MapWrapper>
             </InfoWrapper>
             <ModalContainer/>
+            <BrushChart data={data}/>
+            {/* <LineChart/> */}
         </Wrapper>
     )
 }

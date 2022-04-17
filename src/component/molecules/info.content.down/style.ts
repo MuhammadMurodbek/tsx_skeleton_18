@@ -15,7 +15,8 @@ export const Container = styled.div`
     .daily{
         display: flex;
         width: 90%;
-        gap:4px;
+        gap:7px;
+        margin-top: 20px;
         /* background: red; */
     }
 `
