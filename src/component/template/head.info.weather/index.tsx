@@ -6,7 +6,7 @@ import InfoTitle from "../../organism/head.info.weather"
 const Index:FC = () => {
     return (
         <Container>
-            <InfoTitle/>
+            {/* <InfoTitle/> */}
             {/* <InfoBottomTitle/> */}
         </Container>
     )

@@ -10,7 +10,7 @@ type dataProps = {IconWeather:string}
 const Cloud:FC<dataProps> = ({IconWeather}) => {
    
     return (
-        <div>
+        <div className="icon_cloud">
             {IconWeather === 'sun' && <img src={Sun} alt="sun"/>}
             {IconWeather === 'cloudy' && <img src={Cloudy} alt="sun"/>}
             {IconWeather === 'cloud' && <img src={Clouds} alt="sun"/>}

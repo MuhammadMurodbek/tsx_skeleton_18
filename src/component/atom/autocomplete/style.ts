@@ -2,9 +2,11 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
     width: 100%;
     height: auto;
-    img{
-        width: 25px;
-        height: 25px;
+    .icon_cloud{
+        img{
+            width: 25px;
+            height: 25px;
+        }
     }
 `
 export const MenuListComponent = styled.div`

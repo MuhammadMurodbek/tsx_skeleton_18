@@ -8,14 +8,11 @@ const Index:FC = () => {
     const searchState = useSearchStore(state=>state.searchGlobal)
     const {data, refetch} = useQueryWeather(searchState)
     useEffect(() => {
-       if(searchState.hasOwnProperty('lat')){
-           refetch()
-       }
+        if(searchState.hasOwnProperty('lat')){ refetch()}
     }, [searchState])
-    console.log(searchState)
     return (
         <Wrapper>
-            <MainApplication/>
+            <MainApplication data={data?.data}/>
         </Wrapper>
     )
 }

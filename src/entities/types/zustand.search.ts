@@ -1,7 +1,8 @@
 export type searchStateType = {
     lat:number,
     lon:number,
-    load:boolean
+    load:boolean,
+    name?:string
 }
 
 export type SearchState = {
