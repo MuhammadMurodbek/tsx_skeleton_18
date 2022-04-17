@@ -1,22 +1,8 @@
 import { FC } from 'react'
-import { MenuListComponent } from "./style"
-import CountryFlag from "../country.flag"
 import CloudIcon from "./cloud"
-
-interface latLong {
-    lat?: number,
-    lon?: number,
-}
-
-interface dataPropList {
-    name: string,
-    sys: any,
-    coord: latLong,
-    main: any,
-    rain: object | null,
-    snow: object | null,
-    clouds: any,
-}
+import CountryFlag from "../country.flag"
+import { MenuListComponent } from "./style"
+import {dataPropList} from "../../../entities/interfaces/menu.list"
 
 const MenuList: FC<dataPropList> = ({ name, sys, main, coord, rain, snow, clouds }) => {
     var IconWeather: string = ''
@@ -34,7 +20,7 @@ const MenuList: FC<dataPropList> = ({ name, sys, main, coord, rain, snow, clouds
             </div>
             <div>{(main?.temp - 273).toFixed()}°C</div>
             <CloudIcon IconWeather={IconWeather} />
-            <div className="coordinate">{coord?.lat?.toFixed(2) + " " + coord?.lon?.toFixed(2)}</div>
+            <div className="coordinate">{coord?.lat?.toFixed(2) + ", " + coord?.lon?.toFixed(2)}</div>
         </MenuListComponent>
     )
 }

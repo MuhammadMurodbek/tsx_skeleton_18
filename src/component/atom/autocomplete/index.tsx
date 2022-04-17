@@ -1,8 +1,8 @@
 import { FC, useEffect, useState } from 'react'
 import { Wrapper } from "./style"
 import Select from "react-select";
-import CountryFlag from "../country.flag"
 import MenuList from "./menu.list"
+import {useSearchStore} from "../../../service/search"
 import { changeDelay } from "../../../hooks/sleep.change"
 import { useQueryCities } from "../../../queries/query.cities"
 
@@ -11,7 +11,7 @@ const Index: FC = () => {
     const [list, setList] = useState<any[]>([])
     const [state, setState] = useState<string>('')
     const [value, setValue] = useState<object | null>(null)
-
+    const setSearchGlobal = useSearchStore(state=>state.setSearchGlobal)
     const { data, refetch, isFetching } = useQueryCities({ city: state })
 
     useEffect(() => { if (state) refetch() }, [state])
@@ -19,7 +19,8 @@ const Index: FC = () => {
         let dataApi = data?.data?.list?.map((item: any) => {
             return {
                 value: item?.name,
-                label: <MenuList {...item}/>
+                label: <MenuList {...item}/>,
+                coord:item?.coord
             }
         })
         setList(dataApi)
@@ -30,6 +31,8 @@ const Index: FC = () => {
     };
     const handleChange = (e: any) => {
         setValue({ value: e?.value, label: e?.value })
+        setSearchGlobal({...e?.coord, load:true})
+        console.log(e)
     }
     return (
         <Wrapper>
