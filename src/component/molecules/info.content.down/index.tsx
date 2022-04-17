@@ -10,7 +10,12 @@ const Index:FC = () => {
             <div className="wrap_info">
                 <InfoMainWeather/>
                 <InfoMainWeather/>
+            </div>
+            <div className="wrap_info">
                 <InfoMainWeather/>
+                <InfoMainWeather/>
+            </div>
+            <div className="wrap_info">
                 <InfoMainWeather/>
                 <InfoMainWeather/>
             </div>
