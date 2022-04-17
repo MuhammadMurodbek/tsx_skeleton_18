@@ -1,6 +1,12 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-width: 50%;
-    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+    margin-top: 40px;
+    div{
+        width: 48%;
+    }
 `
