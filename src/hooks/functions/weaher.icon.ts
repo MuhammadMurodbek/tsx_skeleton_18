@@ -1,5 +1,5 @@
 export const weatherIcon = ({rain, snow, clouds}:any) => {
-    console.log(clouds)
+    // console.log(clouds)
     let IconWeather: string = ''
     if (rain && rain !== null) return 'rain'
     else if (rain && snow !== null) return 'snow'

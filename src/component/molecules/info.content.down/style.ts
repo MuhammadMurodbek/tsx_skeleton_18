@@ -12,4 +12,10 @@ export const Container = styled.div`
         gap:20px;
         /* background: green; */
     }
+    .daily{
+        display: flex;
+        width: 90%;
+        gap:4px;
+        /* background: red; */
+    }
 `

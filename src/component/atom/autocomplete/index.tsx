@@ -32,7 +32,7 @@ const Index: FC = () => {
     const handleChange = (e: any) => {
         setValue({ value: e?.value, label: e?.value })
         setSearchGlobal({...e?.coord, load:true, name:e?.value})
-        console.log(e)
+        // console.log(e)
     }
     return (
         <Wrapper>

@@ -3,6 +3,7 @@ import {Container} from "./style"
 import InfoTitle from "../../atom/info.title.forecast"
 import InfoMainWeather from "../../atom/item.info.forecast"
 import {dataProps} from "../../../entities/types/dataApiProps"
+import DailyWeather from "../../atom/daily.time"
 
 const Index:FC<dataProps> = ({data}) => {    
     return (
@@ -19,6 +20,12 @@ const Index:FC<dataProps> = ({data}) => {
             <div className="wrap_info">
                 <InfoMainWeather title="UV" data={data?.current?.uvi} symbol=""/>
                 <InfoMainWeather title="Wind speed" data={data?.current?.wind_speed} symbol="m/s"/>
+            </div>
+            <div className="daily">
+                <DailyWeather data={data?.daily[0]?.temp?.morn} type="Morning"/>
+                <DailyWeather data={data?.daily[0]?.temp?.day} type="Day"/>
+                <DailyWeather data={data?.daily[0]?.temp?.eve} type="Evening"/>
+                <DailyWeather data={data?.daily[0]?.temp?.night} type="Night"/>
             </div>
         </Container>
     )
