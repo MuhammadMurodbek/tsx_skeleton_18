@@ -1,30 +1,47 @@
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { Wrapper } from "./style"
-import AsyncSelect from "react-select/async";
+import Select from "react-select";
+import CountryFlag from "../country.flag"
+import MenuList from "./menu.list"
+import { changeDelay } from "../../../hooks/sleep.change"
+import { useQueryCities } from "../../../queries/query.cities"
 
 const Index: FC = () => {
-    const options = [
-        { value: "Spring", label: "Spring" },
-        { value: "Summer", label: "Summer" },
-        { value: "Autumn", label: "Autumn" },
-        { value: "Winter", label: "Winter" }
-    ];
-    const filter = (inputValue: any) =>
-        options.filter(option =>
-            option.label.toLowerCase().includes(inputValue.toLowerCase())
-        );
-    const LoadOptions = (inputValue: any):any => {
-        return new Promise((resolve, reject) => {
-            // using setTimeout to emulate a call to server
-            setTimeout(() => {
-                resolve(filter(inputValue));
-            }, 2000);
-        });
+    const [timer, setTimer] = useState(null);
+    const [list, setList] = useState<any[]>([])
+    const [state, setState] = useState<string>('')
+    const [value, setValue] = useState<object | null>(null)
+
+    const { data, refetch, isFetching } = useQueryCities({ city: state })
+
+    useEffect(() => { if (state) refetch() }, [state])
+    useEffect(() => {
+        let dataApi = data?.data?.list?.map((item: any) => {
+            return {
+                value: item?.name,
+                label: <MenuList {...item}/>
+            }
+        })
+        setList(dataApi)
+    }, [data])
+
+    const handleInputChange = (inputValue: any): any => {
+        changeDelay(inputValue, setTimer, timer, setState)
     };
-   
+    const handleChange = (e: any) => {
+        setValue({ value: e?.value, label: e?.value })
+    }
     return (
         <Wrapper>
-            <AsyncSelect defaultOptions cacheOptions loadOptions={LoadOptions} placeholder="Select city" />
+            <Select
+                isClearable
+                value={value}
+                options={list}
+                isLoading={isFetching}
+                onChange={handleChange}
+                onInputChange={handleInputChange}
+                placeholder="Select city"
+            />
         </Wrapper>
     )
 }

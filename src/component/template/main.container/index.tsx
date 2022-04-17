@@ -8,7 +8,6 @@ import HeadInfoWeather from "../../organism/head.info.weather"
 const Index:FC = () => {
     return (
         <Wrapper>
-           
             <InfoWrapper>
                 <FormWrapper>
                     <FormComponent />
