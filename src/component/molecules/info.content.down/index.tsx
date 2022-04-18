@@ -5,10 +5,10 @@ import InfoMainWeather from "../../atom/item.info.forecast"
 import {dataProps} from "../../../entities/types/dataApiProps"
 import DailyWeather from "../../atom/daily.time"
 
-const Index:FC<dataProps> = ({data}) => {    
+const Index:FC<dataProps> = ({data, typeDay, typeValue}) => {    
     return (
         <Container>
-            <InfoTitle data={data}/>
+            <InfoTitle data={data} typeDay={typeDay} typeValue={typeValue}/>
             <div className="wrap_info">
                 <InfoMainWeather title='Humidity' data={data?.current?.humidity} symbol="%"/>
                 <InfoMainWeather title='Pressure' data={data?.current?.pressure} symbol="Pa"/>

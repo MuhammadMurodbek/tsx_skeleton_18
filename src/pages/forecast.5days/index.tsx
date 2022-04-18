@@ -8,7 +8,7 @@ const Index:FC = () => {
     console.log(stateDays)
     return (
         <Container>
-            {/* <HeadInfoWeather data={stateDays}/> */}
+            <HeadInfoWeather data={stateDays}/>
         </Container>
     )
 }

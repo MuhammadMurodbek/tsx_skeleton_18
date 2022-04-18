@@ -46,7 +46,7 @@ const Index: FC = () => {
                 isLoading={isFetching}
                 onChange={handleChange}
                 onInputChange={handleInputChange}
-                placeholder="Select city"
+                placeholder="Select location"
             />
         </Wrapper>
     )

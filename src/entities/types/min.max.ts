@@ -1,4 +1,6 @@
 import {dataProps} from "./dataApiProps"
 export interface Combined extends dataProps {
-    type?:string
+    type?:string,
+    typeDay?:boolean,
+    typeValue?:any
 }
