@@ -1,19 +1,21 @@
-import {FC} from 'react'
-import {Container} from "./style"
-import {Combined} from "../../../entities/types/button.type"
-import {weatherIcon} from "../../../hooks/functions/weaher.icon"
+import { FC } from 'react'
+import { Container } from "./style"
+import { Combined } from "../../../entities/types/button.type"
+import { weatherIcon } from "../../../hooks/functions/weaher.icon"
 import Clouds from "../../atom/autocomplete/cloud"
 
-const Index:FC<Combined> = ({data, typeDay, typeValue}) => {
-
-    var cloud = typeDay ? typeValue?.clouds : data?.current?.clouds
-    var temp = typeDay ? typeValue?.temp : data?.current?.temp
-    
+const Index: FC<Combined> = ({ data, dinamic, queryId }) => {
     return (
         <Container>
             <div className="temp_number">
-                <Clouds IconWeather={weatherIcon({clouds: cloud})}/>
-                <span>{temp?.toFixed()}°C</span>
+                <Clouds
+                    IconWeather={
+                        weatherIcon({
+                            clouds: dinamic ? data?.daily[queryId || 0]?.clouds : data?.current?.clouds
+                        })
+                    }
+                />
+                <span>{dinamic ? data?.daily[queryId || 0]?.temp?.day?.toFixed() : data?.current?.temp?.toFixed()}°C</span>
             </div>
         </Container>
     )

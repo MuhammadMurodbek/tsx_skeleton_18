@@ -1,5 +1,7 @@
 export interface dataProps  {
     data:any,
     typeDay?:boolean,
-    typeValue?:any
+    typeValue?:any,
+    dinamic?:boolean,
+    queryId?:number
 }
