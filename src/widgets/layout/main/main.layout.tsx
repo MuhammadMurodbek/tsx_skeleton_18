@@ -1,12 +1,13 @@
 import {FC} from 'react'
 import {Wrapper, Component} from "./style.layout"
-// import {LayoutProps} from "../../custom/interface/main.layout"
+import Navbar from "../../../component/molecules/navbar.component"
 interface LayoutProps {
     children: JSX.Element[] | JSX.Element
 }
 const Layout:FC<LayoutProps> = ({children}) => {
     return (
         <Wrapper>
+            <Navbar/>
             <Component>
                 {children}
             </Component>

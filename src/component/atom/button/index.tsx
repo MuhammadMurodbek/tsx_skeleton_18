@@ -1,10 +1,16 @@
-import React,{FC} from 'react'
+import {FC} from 'react'
+import { Link } from 'react-router-dom'
 import {Container} from "./style"
 
-const Index:FC = () => {
+type btnProp = {
+    title:string,
+    id:number
+}
+
+const Index:FC<btnProp> = ({title,id}) => {
     return (
         <Container>
-            <button className="button">Read more...</button>
+            <Link className="button" to={`/${title}?id=${id}`}>{title}</Link>
         </Container>
     )
 }

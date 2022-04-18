@@ -30,9 +30,12 @@ const Index: FC = () => {
         changeDelay(inputValue, setTimer, timer, setState)
     };
     const handleChange = (e: any) => {
-        setValue({ value: e?.value, label: e?.value })
-        setSearchGlobal({...e?.coord, load:true, name:e?.value})
-        // console.log(e)
+        if(e){
+            setValue({ value: e?.value, label: e?.value })
+            setSearchGlobal({...e?.coord, load:true, name:e?.value})
+        }else{
+            setValue(null)
+        }
     }
     return (
         <Wrapper>

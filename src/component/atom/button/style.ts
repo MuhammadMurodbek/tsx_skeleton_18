@@ -5,7 +5,7 @@ export const Container = styled.div`
     .temp_number{
         font-size: 2.5rem;
     }
-    button{
+    .button{
         padding:10px 12px;
         border:none;
         outline: none;
@@ -14,5 +14,6 @@ export const Container = styled.div`
         color: #fff;
         font-family: 'Poppins';
         cursor: pointer;
+        text-decoration: none;
     }
 `

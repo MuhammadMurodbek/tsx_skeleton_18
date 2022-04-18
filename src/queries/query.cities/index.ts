@@ -11,5 +11,11 @@ const requestFunction = (city:cityProp) => {
 }
 
 export const useQueryCities = (city:cityProp) => {
-    return useQuery(['search_city', city],()=>requestFunction(city), {enabled:false})
+    return useQuery(['search_city', city],()=>requestFunction(city), 
+    {
+        enabled:false, 
+        // refetchInterval:400,
+        // refetchIntervalInBackground:true
+    }
+    )
 }
