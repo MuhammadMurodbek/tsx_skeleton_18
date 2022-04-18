@@ -12,7 +12,6 @@ const Index:FC<dataProps> = ({data}) => {
                 <InfoCity data={data}/>
                 <InfoMainWeather data={data}/>
             </div>
-            {/* <InfoBottomTitle/> */}
         </Container>
     )
 }

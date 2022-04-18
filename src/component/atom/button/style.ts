@@ -10,7 +10,7 @@ export const Container = styled.div`
         border:none;
         outline: none;
         border-radius: 4px;
-        background: #75bae3;
+        background:  #39bfc3;
         color: #fff;
         font-family: 'Poppins';
         cursor: pointer;

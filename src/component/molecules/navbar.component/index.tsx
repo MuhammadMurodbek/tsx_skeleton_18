@@ -10,6 +10,7 @@ const Index:FC = () => {
         date.setDate(date.getDate() + days);
         return date;
     }
+    console.log(stateDays)
     return (
         <Wrapper>
             <Container>

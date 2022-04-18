@@ -10,7 +10,7 @@ type btnProp = {
 const Index:FC<btnProp> = ({title,id}) => {
     return (
         <Container>
-            <Link className="button" to={`/${title}?id=${id}`}>{title}</Link>
+            <Link className="button" to={`/${title}`}>{title}</Link>
         </Container>
     )
 }

@@ -1,7 +1,10 @@
 import create from "zustand"
 import {daysProps} from "../../entities/types/zustand.days"
+import { persist } from "zustand/middleware"
 
-export const useDaysStore = create<daysProps>(set => ({
+var store = (set:any) => ({
     data: {},
-    setDaysGlobal: item => set({data:item})
-}))
+    setDaysGlobal: (item:any) => set({data:item})
+})
+
+export const useDaysStore = create<daysProps>(persist(store,{name:"day_store"}))

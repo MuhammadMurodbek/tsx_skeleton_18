@@ -4,7 +4,7 @@ import { urls } from "../../config"
 
 type cityProp = {
     city:string
-}
+} 
 
 const requestFunction = (city:cityProp) => {
     return axios.get(urls.searchCity+`?q=${city?.city}&appid=439d4b804bc8187953eb36d2a8c26a02&units=metric`)
