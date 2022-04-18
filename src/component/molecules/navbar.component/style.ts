@@ -8,12 +8,25 @@ export const Container = styled.div`
     margin:0 auto;
     gap:30px;
     padding:10px;
-    /* margin-top: 18px; */
-    /* margsin-bottom: 8px; */
-    /* background: red; */
+
+    .back_link{
+        position: absolute;
+        left: 0;
+        width: 100px;
+        display: inline-block;
+        text-decoration: none;
+        img{
+            position: relative;
+            top:3px;
+            width: 25px;
+            height: 25px;
+        }
+    }
 
 `
 export const Wrapper = styled.div`
+    position: relative;
+
     width: 90%;
     display: block;
     margin-top:15px;

@@ -1,5 +1,5 @@
 import {FC} from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import {Container} from "./style"
 
 type btnProp = {
@@ -10,7 +10,7 @@ type btnProp = {
 const Index:FC<btnProp> = ({title,id}) => {
     return (
         <Container>
-            <Link className="button" to={`/${title}?id=${id}`}>{title}</Link>
+            <NavLink className="button" to={`/${title}?id=${id}`}>{title}</NavLink>
         </Container>
     )
 }

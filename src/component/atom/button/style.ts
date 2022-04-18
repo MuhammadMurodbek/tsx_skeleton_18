@@ -16,4 +16,7 @@ export const Container = styled.div`
         cursor: pointer;
         text-decoration: none;
     }
+    .button.active{
+        background:  #386f70;
+    }
 `
