@@ -3,5 +3,6 @@ export interface dataProps  {
     typeDay?:boolean,
     typeValue?:any,
     dinamic?:boolean,
-    queryId?:number
+    queryId?:number,
+    isLoading?:boolean | undefined
 }

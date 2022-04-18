@@ -7,6 +7,7 @@ export const Container = styled.div`
     gap:15px;
     margin-top: 40px;
     div{
-        width: 48%;
+        width: 95%;
+        padding: 10px;
     }
 `

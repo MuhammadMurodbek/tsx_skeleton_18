@@ -8,14 +8,17 @@ import { useQueryWeather } from "../../queries/query.weather"
 const Index: FC = () => {
     const searchState = useSearchStore(state => state.searchGlobal)
     const setStateDays = useDaysStore(state => state.setDaysGlobal)
-    const { data, refetch } = useQueryWeather(searchState)
+    const { data, refetch, isLoading } = useQueryWeather(searchState)
     
     useEffect(() => {if (searchState.hasOwnProperty('lat')) { refetch() }}, [searchState])
     useEffect(() => { if (data) setStateDays(data?.data) }, [data])
 
     return (
         <Wrapper>
-            <MainApplication data={data?.data} />
+            <MainApplication 
+                data={data?.data} 
+                isLoading={isLoading}
+            />
         </Wrapper>
     )
 }

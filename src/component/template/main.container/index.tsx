@@ -6,23 +6,24 @@ import ModalContainer from "../../atom/modal"
 import {dataProps} from "../../../entities/types/dataApiProps"
 import HeadInfoWeather from "../../organism/head.info.weather"
 import BrushChart from "../../organism/brush.chart.labeled"
-// import LineChart from "../../molecules/line.chart/asd"
 
-const Index:FC<dataProps> = ({data}) => {
+const Index:FC<dataProps> = ({data, isLoading}) => {
     return (
         <Wrapper>
             <InfoWrapper>
                 <FormWrapper>
                     <FormComponent />
-                    <HeadInfoWeather data={data}/> 
+                    <HeadInfoWeather 
+                        data={data}
+                        isLoading={isLoading}
+                    /> 
                 </FormWrapper>
                 <MapWrapper>
                     <GoogleMap/> 
                 </MapWrapper>
             </InfoWrapper>
             <ModalContainer/>
-            <BrushChart data={data}/>
-            {/* <LineChart/> */}
+            <BrushChart data={data} isLoading={isLoading}/>
         </Wrapper>
     )
 }

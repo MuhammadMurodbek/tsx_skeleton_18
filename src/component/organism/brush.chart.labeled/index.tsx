@@ -3,12 +3,15 @@ import { Container } from "./style"
 import { dataProps } from "../../../entities/types/dataApiProps"
 import { LineChart } from "../../molecules/line.chart"
 import { Barchart } from "../../molecules/bar.chart"
+import Skeleton from "../../../widgets/skeletons/check.load"
+import {loadObj} from "./const"
 
-const Index: FC<dataProps> = ({ data }: any) => {
+const Index: FC<dataProps> = ({ data, isLoading }: any) => {
+    var newLoad = {loading:isLoading, ...loadObj}
     return (
         <Container>
-            <div><LineChart rowData={data}/></div>
-            <div><Barchart rowData={data}/></div>
+            <div><Skeleton {...newLoad}><LineChart rowData={data}/></Skeleton></div>
+            <div><Skeleton {...newLoad}><Barchart rowData={data}/></Skeleton></div>
         </Container>
     )
 }
