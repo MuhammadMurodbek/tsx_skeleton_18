@@ -3,7 +3,7 @@ import { propsObj } from "./const"
 import { Container } from "./style"
 import InfoCity from "../../molecules/info.content.up"
 import Skeleton from "../../../widgets/skeletons/check.load"
-import { dataProps } from "../../../entities/types/dataApiProps"
+import { dataProps } from "../../../entities/interfaces/dataApiProps"
 import InfoMainWeather from "../../molecules/info.content.down"
 
 const Index: FC<dataProps> = ({ data, dinamic, queryId, isLoading }) => {

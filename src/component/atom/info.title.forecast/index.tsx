@@ -1,6 +1,6 @@
 import React,{FC} from 'react'
 import {Container} from "./style"
-import {dataProps} from "../../../entities/types/dataApiProps"
+import {dataProps} from "../../../entities/interfaces/dataApiProps"
 
 const Index:FC<dataProps> = ({data}) => {
     return (

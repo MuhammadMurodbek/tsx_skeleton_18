@@ -3,7 +3,7 @@ import { Wrapper } from './style'
 import GoogleMap from "../../molecules/google.map"
 import {useSearchStore} from "../../../service/search"
 import Skeleton from "../../../widgets/skeletons/check.load"
-import {dataProps} from "../../../entities/types/dataApiProps"
+import {dataProps} from "../../../entities/interfaces/dataApiProps"
 
 const Index:FC<dataProps> = ({isLoading}) => {
     const stateSearch = useSearchStore(state=>state.searchGlobal)

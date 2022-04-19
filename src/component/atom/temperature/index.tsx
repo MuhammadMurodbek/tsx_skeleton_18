@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Container } from "./style"
-import { Combined } from "../../../entities/types/button.type"
+import { Combined } from "../../../entities/interfaces/button.type"
 import { weatherIcon } from "../../../hooks/functions/weaher.icon"
 import Clouds from "../../atom/autocomplete/cloud"
 

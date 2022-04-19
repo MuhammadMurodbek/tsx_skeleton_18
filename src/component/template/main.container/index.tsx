@@ -3,7 +3,7 @@ import { Wrapper, FormWrapper, MapWrapper, InfoWrapper } from './style'
 import GoogleMap from "../../organism/google.map"
 import FormComponent from "../../organism/form.side"
 import TestApiComponent from "../../organism/test.api.component"
-import { dataProps } from "../../../entities/types/dataApiProps"
+import { dataProps } from "../../../entities/interfaces/dataApiProps"
 import HeadInfoWeather from "../../organism/head.info.weather"
 import BrushChart from "../../organism/brush.chart.labeled"
 

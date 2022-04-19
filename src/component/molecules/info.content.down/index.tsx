@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { Container } from "./style"
 import InfoTitle from "../../atom/info.title.forecast"
 import InfoMainWeather from "../../atom/item.info.forecast"
-import { dataProps } from "../../../entities/types/dataApiProps"
+import { dataProps } from "../../../entities/interfaces/dataApiProps"
 import DailyWeather from "../../atom/daily.time"
 
 const Index: FC<dataProps> = ({ data, dinamic, queryId }) => {

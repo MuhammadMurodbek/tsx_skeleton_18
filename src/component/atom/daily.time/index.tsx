@@ -1,6 +1,6 @@
 import {FC} from 'react'
 import {Container} from "./style"
-import {Combined} from "../../../entities/types/min.max"
+import {Combined} from "../../../entities/interfaces/min.max"
 
 const Index:FC<Combined> = ({data, type, typeDay, typeValue}) => {
     return (

@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Container } from "./style"
 import { useSearchStore } from "../../../service/search"
-import { dataProps } from "../../../entities/types/dataApiProps"
+import { dataProps } from "../../../entities/interfaces/dataApiProps"
 
 const Index: FC<dataProps> = ({ dinamic, queryId }) => {
     const stateSearch = useSearchStore(state => state.searchGlobal)

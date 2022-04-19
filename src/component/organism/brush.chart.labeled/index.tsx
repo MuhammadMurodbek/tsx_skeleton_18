@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Container } from "./style"
-import { dataProps } from "../../../entities/types/dataApiProps"
+import { dataProps } from "../../../entities/interfaces/dataApiProps"
 import { LineChart } from "../../molecules/line.chart"
 import { Barchart } from "../../molecules/bar.chart"
 import Skeleton from "../../../widgets/skeletons/check.load"

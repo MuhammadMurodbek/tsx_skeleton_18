@@ -2,7 +2,7 @@ import {FC} from 'react'
 import {Container} from "./style"
 import TitleHead from "../../atom/title.city"
 import TemparatureInfo from "../../atom/temperature"
-import {dataProps} from "../../../entities/types/dataApiProps"
+import {dataProps} from "../../../entities/interfaces/dataApiProps"
 import MinMaxTemp from "../../atom/min.max.temp"
 
 const Index:FC<dataProps> = ({data, dinamic, queryId}) => {
