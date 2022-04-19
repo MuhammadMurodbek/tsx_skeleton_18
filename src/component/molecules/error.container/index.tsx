@@ -1,11 +1,20 @@
 import {FC} from 'react'
-import ModalContainer from "../../atom/modal"
+import {Container, ButtonRefresh} from "./style"
+import Error from "../../../assets/error.png"
+import FormAutoComplete from "../../organism/form.side"
 
-const Index:FC = ({refetch, data}:any) => {
+const Index:FC<any> = ({refetch, data}:any) => {
+    console.log(refetch)
     return (
-        <div>
-            <ModalContainer/>
-        </div>
+        <Container>
+            <div className="select"><FormAutoComplete/></div>
+            <div className="wrapper">
+                <img src={Error} alt="error"/>
+                <div className="title">{data}</div>
+                <div className="text">Something went wrong.</div>
+                <ButtonRefresh onClick={()=>refetch()}>Refresh</ButtonRefresh>
+            </div>
+        </Container>
     )
 }
 

@@ -7,13 +7,15 @@ import { dataProps } from "../../../entities/types/dataApiProps"
 import HeadInfoWeather from "../../organism/head.info.weather"
 import BrushChart from "../../organism/brush.chart.labeled"
 
-const Index: FC<dataProps> = ({ data, isLoading, refetch, status }) => {
+const Index: FC<dataProps> = ({ data, isLoading, refetch, status, error }) => {
     var obj = {
         refetch:refetch,
         data:data,
         isLoading:isLoading,
-        status:status
+        status:status,
+        error:error
     }
+    // console.log(refetch)
     return (
         <Wrapper>
             <TestApiComponent {...obj}>

@@ -6,5 +6,6 @@ export interface dataProps  {
     queryId?:number,
     isLoading?:boolean | undefined,
     refetch?:any,
-    status?:any
+    status?:any,
+    error?:any
 }

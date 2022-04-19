@@ -10,11 +10,11 @@ const Index: FC = () => {
     
     const searchState = useSearchStore(state => state.searchGlobal)
     const setStateDays = useDaysStore(state => state.setDaysGlobal)
-    const { data, refetch, isLoading, status,error, isError } = useQueryWeather(searchState)
+    const { data, refetch, isLoading, status,error } = useQueryWeather(searchState)
     
     useEffect(() => {if (searchState.hasOwnProperty('lat')) { refetch() }}, [searchState])
     useEffect(() => { if (data) setStateDays(data?.data) }, [data])
-    // console.log(data, error)
+    // console.log(error)
     return (
         <Wrapper>
             <MainApplication 
@@ -22,6 +22,7 @@ const Index: FC = () => {
                 isLoading={isLoading}
                 refetch={refetch}
                 status={status}
+                error={errorText(error)}
             />
         </Wrapper>
     )

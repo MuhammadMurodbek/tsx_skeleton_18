@@ -1,3 +1,3 @@
 export const errorText = (error)=>{
-    return error?.response
+    return error?.message
 }
