@@ -1,5 +1,5 @@
 export var propsObj = {
-    count: 6,
+    count: 7,
     width: '90%',
     height: 30
 }

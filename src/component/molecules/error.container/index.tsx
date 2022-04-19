@@ -1,7 +1,7 @@
-import React from 'react'
+import {FC} from 'react'
 import ModalContainer from "../../atom/modal"
 
-const Index = () => {
+const Index:FC = ({refetch, data}:any) => {
     return (
         <div>
             <ModalContainer/>

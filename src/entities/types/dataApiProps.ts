@@ -4,5 +4,7 @@ export interface dataProps  {
     typeValue?:any,
     dinamic?:boolean,
     queryId?:number,
-    isLoading?:boolean | undefined
+    isLoading?:boolean | undefined,
+    refetch?:any,
+    status?:any
 }

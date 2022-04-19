@@ -1,29 +1,35 @@
-import {FC} from 'react'
+import { FC } from 'react'
 import { Wrapper, FormWrapper, MapWrapper, InfoWrapper } from './style'
 import GoogleMap from "../../organism/google.map"
 import FormComponent from "../../organism/form.side"
-import ModalContainer from "../../atom/modal"
-import {dataProps} from "../../../entities/types/dataApiProps"
+import TestApiComponent from "../../organism/test.api.component"
+import { dataProps } from "../../../entities/types/dataApiProps"
 import HeadInfoWeather from "../../organism/head.info.weather"
 import BrushChart from "../../organism/brush.chart.labeled"
 
-const Index:FC<dataProps> = ({data, isLoading}) => {
+const Index: FC<dataProps> = ({ data, isLoading, refetch, status }) => {
+    var obj = {
+        refetch:refetch,
+        data:data,
+        isLoading:isLoading,
+        status:status
+    }
     return (
         <Wrapper>
-            <InfoWrapper>
-                <FormWrapper>
-                    <FormComponent />
-                    <HeadInfoWeather 
-                        data={data}
-                        isLoading={isLoading}
-                    /> 
-                </FormWrapper>
-                <MapWrapper>
-                    <GoogleMap/> 
-                </MapWrapper>
-            </InfoWrapper>
-            <ModalContainer/>
-            <BrushChart data={data} isLoading={isLoading}/>
+            <TestApiComponent {...obj}>
+                <>
+                    <InfoWrapper>
+                        <FormWrapper>
+                            <FormComponent />
+                            <HeadInfoWeather data={data} isLoading={isLoading}/>
+                        </FormWrapper>
+                        <MapWrapper>
+                            <GoogleMap data={null} isLoading={isLoading}/>
+                        </MapWrapper>
+                    </InfoWrapper>
+                    <BrushChart data={data} isLoading={isLoading}/>
+                </>
+            </TestApiComponent>
         </Wrapper>
     )
 }
