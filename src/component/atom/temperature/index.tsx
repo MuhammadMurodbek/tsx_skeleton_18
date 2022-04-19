@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Container } from "./style"
 import { Combined } from "../../../entities/interfaces/button.type"
-import { weatherIcon } from "../../../hooks/functions/weaher.icon"
+import { weatherIcon } from "../../../custom/functions/weaher.icon"
 import Clouds from "../../atom/autocomplete/cloud"
 
 const Index: FC<Combined> = ({ data, dinamic, queryId }) => {

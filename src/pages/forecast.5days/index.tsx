@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom"
 import HeadInfoWeather from "../../component/organism/head.info.weather"
 import { useDaysStore } from "../../service/days.store"
 import { Container } from './style'
-import { queryParser } from "../../hooks/query.parser"
+import { queryParser } from "../../custom/query.parser"
 
 const Index: FC = () => {
 

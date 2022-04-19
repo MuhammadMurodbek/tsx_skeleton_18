@@ -3,7 +3,7 @@ import { Wrapper } from "./style"
 import Select from "react-select";
 import MenuList from "./menu.list"
 import {useSearchStore} from "../../../service/search"
-import { changeDelay } from "../../../hooks/sleep.change"
+import { changeDelay } from "../../../custom/sleep.change"
 import { useQueryCities } from "../../../queries/query.cities"
 
 const Index: FC = () => {
